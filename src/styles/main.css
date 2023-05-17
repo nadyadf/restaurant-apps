@@ -1,3 +1,47 @@
-img {
-  display: block;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #e07a5f;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-brand {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.navbar ul a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.more-icon {
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive nav tablet */
+@media screen and (max-width: 768px) {
+  .navbar ul a{
+    font-size: 16px;
+  }
 }
