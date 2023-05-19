@@ -1,37 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ysabeau:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Ysabeau', sans-serif;
+}
+
 .navbar {
   background-color: #e07a5f;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  overflow: hidden;
+  
 }
 
 .navbar-toggler {
   border: none;
   background-color: transparent;
+  display: none;
 }
 
 .navbar-brand {
   color: whitesmoke;
+  font-family: 'Pacifico', cursive;
   text-decoration: none;
   font-size: 1.3rem;
+  padding: 8px 1.2rem;
 }
 
 .navbar ul {
   list-style-type: none;
   display: flex;
   column-gap: 2rem;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.navbar ul, .navbar-toggler {
+  margin-right: 1rem;
 }
 
 .navbar ul a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 18px;
+  display: block;
+  padding: 1rem 1.2rem;
+}
+
+.navbar ul a:hover {
+  background-color: #f4f1de;
+  color: #3d405b;
 }
 
 .more-icon {
@@ -41,7 +65,50 @@
 
 /* Responsive nav tablet */
 @media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
   .navbar ul a{
     font-size: 16px;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar.responsive {
+    display: grid;
+    grid-template-columns: 
+    94% 6%;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+  }
+  .navbar.responsive .navbar-brand {
+    width: fit-content;
+  }
+  .navbar.responsive .navbar-toggler {
+    grid-area: 'icon';
+  }
+  .navbar.responsive ul{
+    margin-right: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: block;
+    flex-direction: column;
+
+  }
+
+  
+}
+
+
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
