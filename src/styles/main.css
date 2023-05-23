@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  
+
 }
 
 .navbar-toggler {
@@ -29,7 +29,7 @@ body {
   color: whitesmoke;
   font-family: 'Pacifico', cursive;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 8px 1.2rem;
 }
 
@@ -76,7 +76,7 @@ body {
   }
   .navbar.responsive {
     display: grid;
-    grid-template-columns: 
+    grid-template-columns:
     94% 6%;
     /* align-items: flex-start; */
     justify-content: space-between;
@@ -96,7 +96,7 @@ body {
 
   }
 
-  
+
 }
 
 
