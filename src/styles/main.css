@@ -10,13 +10,19 @@ body {
   font-family: 'Ysabeau', sans-serif;
 }
 
+
+
 .navbar {
   background-color: #e07a5f;
   display: flex;
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .navbar-toggler {
@@ -36,13 +42,13 @@ body {
 .navbar ul {
   list-style-type: none;
   display: flex;
-  column-gap: 2rem;
+  column-gap: 4rem;
   animation: growDown 300ms ease-in-out forwards;
   transform-origin: top center;
 }
 
 .navbar ul, .navbar-toggler {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .navbar ul a {
@@ -50,12 +56,12 @@ body {
   color: whitesmoke;
   font-size: 18px;
   display: block;
-  padding: 1rem 1.2rem;
+  /* padding: 1.2rem; */
 }
 
 .navbar ul a:hover {
-  background-color: #f4f1de;
-  color: #3d405b;
+  /* background-color: #f4f1de; */
+  color: #f2cc8f;
 }
 
 .more-icon {
@@ -69,16 +75,19 @@ body {
     display: none;
   }
   .navbar ul a{
-    font-size: 16px;
+    font-size: 18px;
+    display: block;
+    padding: 12px ;
+  }
+  .navbar ul a:hover {
+    background-color: #f4f1de;
+    color: #3d405b;
   }
   .navbar-toggler {
     display: block;
   }
   .navbar.responsive {
     display: grid;
-    grid-template-columns:
-    94% 6%;
-    /* align-items: flex-start; */
     justify-content: space-between;
   }
   .navbar.responsive .navbar-brand {
@@ -111,4 +120,72 @@ body {
   100% {
     transform: scaleY(1);
   }
+}
+
+/* Banner */
+.container {
+  overflow: hidden;
+}
+
+.jumbotron {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.jumbotron img {
+  min-width: 1000px;
+}
+
+@media screen and (max-width: 1200px) {
+  .jumbotron img {
+    width: 100%;
+  }
+}
+
+/* Explore Menu */
+.menus {
+  height: 1000px;
+  padding: 40px 200px;
+}
+.menus h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+.menu-card {
+  width: 250px;
+  position: relative;
+  background-color: rgb(251 113 133);
+  box-shadow: rgba(254, 205, 211, 0.1) 0px 4px 16px
+  rgba(254, 205, 211, 0.1) 0px 8px 24px
+  rgba(254, 205, 211, 0.1) 0px 16px 56px;
+}
+.menu-info {
+  padding: 3px;
+}
+.menu-image {
+  background-color: #3d405b;
+  height: 150px;
+}
+.city-name {
+  position: absolute;
+  background-color: burlywood;
+  top: 20px;
+  width: 40%;
+  padding: 8px;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #e07a5f;
+  padding: 20px 10px;
+  color: whitesmoke;
 }
