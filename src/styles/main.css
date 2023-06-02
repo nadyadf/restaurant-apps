@@ -168,14 +168,13 @@ body {
 /* Penutup Jumbotron Section */
 
 
-
-
 /* Explore Section */
 
 .content {
   padding: 40px 20px;
+  margin-top: 40px;
 }
-.content h1 {
+.content__heading {
   text-align: center;
   font-size: 2em;
   margin-bottom: 25px;
@@ -217,6 +216,111 @@ body {
 
 /* Penutup Explore Section */
 
+/* Detail */
+
+.restaurant h2 {
+  font-size: 1.8em;
+}
+
+.restaurant h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.restaurant h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.resto__data img {
+  width: 60%;
+  min-width: 500px;
+}
+
+.categories {
+  position: absolute;
+  right: 5rem;
+  top: 10rem;
+}
+
+.restaurant .category {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #f2cc8f;
+  margin: 0 5px
+}
+
+.resto__data, .reviewContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+
+.resto__data {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 20px;
+}
+
+.reviews {
+  margin-top: 1.5rem;
+}
+
+.reviews .customerName {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reviews .reviewDate {
+  margin-top: 10px;
+  color: darkgray;
+}
+
+.reviews .review {
+  font-size: 1.2em;
+}
+
+
+
+.resto__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.resto__image-container figcaption {
+  z-index: -1;
+  margin-top: -14px;
+  padding: 10px;
+  /* border: 4px solid #81b29a; */
+  background-color: #81b29a;
+}
+
+.resto__image-container span {
+  font-size: 1.8em;
+}
+
+.resto__info h4{
+  font-size: 1.3em;
+}
+
+.resto__info h4:not(:first-child) {
+  margin-top: 10px;
+}
+
+.resto__menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 25px;
+  margin-top: 10px;
+}
+
+
+
+
 
 /* Footer Section */
 
@@ -226,10 +330,6 @@ footer {
   padding: 20px 10px;
   color: whitesmoke;
 }
-
-/* Penutup Footer Section */
-
-
 
 /* Responsive Explore Section & Footer */
 
