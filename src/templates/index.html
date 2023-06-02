@@ -4,81 +4,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../styles/main.css">
+    <!-- <link rel="stylesheet" href="../styles/main.css"> -->
     <script src="https://kit.fontawesome.com/6d173f80fe.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a8270badb0.js" crossorigin="anonymous"></script>
-    <title>Nadh's Resto</title>
+
+    <title>Foodpedia</title>
   </head>
   <body>
-    <nav class="navbar" id="navbar">
-      <a href="#" class="navbar-brand">Nadh's Resto<i class="fa-solid fa-utensils" style="color: #f2cc8f;"></i></a>
 
-      <button class="navbar-toggler" type="button" >
+    <a href="#explore" class="skip-link">Menuhhvvhjju ke konten</a>
+
+    <nav class="navbar" id="navbar">
+      <a href="/" class="navbar-brand">Foodpedia<i class="fa-solid fa-utensils" style="color: #f2cc8f;"></i></a>
+      <button class="navbar-toggler" type="button">
         <i class="more-icon fa-solid fa-bars fa-xl"></i>
       </button>
-
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="#" class="nav-link">Home</a>
+          <a href="/" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Favorite</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About Us</a>
+          <a href="https://github.com/nadyadf" class="nav-link" target="_blank">About Us</a>
         </li>
       </ul>
-</nav>
-  <section class="container jumbotron">
-      <img src="../public/images/heros/hero-image_2.jpg" alt="hero-image">
-  </section>
+    </nav>
 
-  <section class="menus">
-    <h1>Explore Restaurant</h1>
-    <div class="flex-container">
-      <article class="menu-card">
-        <div class="city-name">
-          <p>Jogja</p>
-        </div>
-        <figure class="menu-image">
-          <img src="" alt="">
-        </figure>
-        <div class="menu-info">
-          <p class="rating">Rating: 4.5</p>
-          <h2 class="menu-name">Nama menu</h2>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit.</p>
-        </div>
-      </article>
-      <article class="menu-card">
-        <div class="city-name">Jogja</div>
-        <figure class="menu-image">
-          <img src="" alt="">
-        </figure>
-        <div class="menu-info">
-          <p class="rating">Rating: 4.5</p>
-          <h2 class="menu-name">Nama menu</h2>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit.</p>
-        </div>
-      </article>
-      <article class="menu-card">
-        <div class="city-name">Jogja</div>
-        <figure class="menu-image">
-          <img src="" alt="">
-        </figure>
-        <div class="menu-info">
-          <p class="rating">Rating: 4.5</p>
-          <h2 class="menu-name">Nama menu</h2>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit.</p>
-        </div>
-      </article>
+    <section class="jumbotron">
+        <img src="./images/heros/hero-image_2.jpg" alt="hero-image">
+    </section>
 
-  </div>
-  </section>
-  <footer>
-    <p>&#169 2023 Nadh's Resto. All rights reserved. Taste the Authentic Flavors in Japan.</p>
-  </footer>
+    <section class="explore" id="explore">
+      <h1>Explore Restaurant</h1>
+      <div class="menu-list" id="menu-list"></div>
+    </section>
 
-  <script src="../scripts/responsive-navbar.js"></script>
+    <footer>
+      <p>&#169 2023 Foodpedia: Sumber inspirasi untuk kenikmatan kulinermu.</p>
+    </footer>
 
   </body>
 </html>

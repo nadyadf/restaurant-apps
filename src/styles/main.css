@@ -10,6 +10,21 @@ body {
   font-family: 'Ysabeau', sans-serif;
 }
 
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  padding: 8px;
+  background-color: #f2cc8f;
+  z-index: 99;
+  text-decoration: none;
+  color: black;
+}
+
+.skip-link:focus {
+  top: 100px;
+}
+
 
 
 .navbar {
@@ -49,6 +64,8 @@ body {
 
 .navbar ul, .navbar-toggler {
   margin-right: 2rem;
+  min-width: 45px;
+  min-height: 45px;
 }
 
 .navbar ul a {
@@ -56,11 +73,10 @@ body {
   color: whitesmoke;
   font-size: 18px;
   display: block;
-  /* padding: 1.2rem; */
+  padding: 10px 7px;
 }
 
 .navbar ul a:hover {
-  /* background-color: #f4f1de; */
   color: #f2cc8f;
 }
 
@@ -69,7 +85,7 @@ body {
   cursor: pointer;
 }
 
-/* Responsive nav tablet */
+/* Responsive nav mobile */
 @media screen and (max-width: 768px) {
   .navbar ul {
     display: none;
@@ -104,11 +120,12 @@ body {
     flex-direction: column;
 
   }
-
-
 }
 
+ /* Penutup responsive nav mobile */
 
+
+ /* Animasi Dropdown Menu */
 
 @keyframes growDown {
   0% {
@@ -122,70 +139,172 @@ body {
   }
 }
 
-/* Banner */
-.container {
-  overflow: hidden;
-}
+/* Penutup Animasi Dropdown Menu */
+
+
+/* Jumbotron Section */
 
 .jumbotron {
   height: 100vh;
   width: 100%;
   text-align: center;
+  object-fit: cover;
+  object-position: center;
 }
 .jumbotron img {
-  min-width: 1000px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
-@media screen and (max-width: 1200px) {
+/* Responsive Jumbotron */
+
+@media screen and (min-width: 1200px) {
   .jumbotron img {
-    width: 100%;
+    min-width: 1000px;
   }
 }
 
-/* Explore Menu */
-.menus {
-  height: 1000px;
-  padding: 40px 200px;
+/* Penutup Jumbotron Section */
+
+
+
+
+/* Explore Section */
+
+.explore {
+  padding: 40px 20px;
 }
-.menus h1 {
+.explore h1 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 25px;
 }
-.flex-container {
+.menu-list {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
 }
 .menu-card {
-  width: 250px;
+  width: 300px;
   position: relative;
-  background-color: rgb(251 113 133);
-  box-shadow: rgba(254, 205, 211, 0.1) 0px 4px 16px
-  rgba(254, 205, 211, 0.1) 0px 8px 24px
-  rgba(254, 205, 211, 0.1) 0px 16px 56px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .menu-info {
-  padding: 3px;
+  padding: 10px;
 }
 .menu-image {
   background-color: #3d405b;
-  height: 150px;
+}
+.menu-image img {
+  width: 300px;
 }
 .city-name {
   position: absolute;
-  background-color: burlywood;
+  background-color: #3d405b;
+  color: #f4f1de;
   top: 20px;
-  width: 40%;
-  padding: 8px;
+  width: 30%;
+  padding: 6px;
+  font-size: 14px;
 }
 
+/* Penutup Explore Section */
 
-/* Footer */
+
+/* Footer Section */
+
 footer {
   text-align: center;
   background-color: #e07a5f;
   padding: 20px 10px;
   color: whitesmoke;
 }
+
+/* Penutup Footer Section */
+
+
+
+/* Responsive Explore Section & Footer */
+
+@media screen and (max-width: 576px) {
+  .city-name {
+    padding: 10px;
+    font-size: 1em;
+    width: 40%;
+  }
+  .menu-list {
+    gap: 2rem;
+  }
+  .menu-card {
+    width: 100%;
+  }
+  .menu-image img {
+    width: 100%;
+  }
+  footer {
+    padding: 20px 40px;
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+  /* .explore {
+    padding: 40px 20px;
+  } */
+  .menu-list {
+    gap: 2rem;
+  }
+  .menu-card {
+    width: 400px;
+  }
+  .menu-image img {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list {
+    gap: 2rem;
+  }
+  .menu-card {
+    width: 350px;
+  }
+  .menu-image img {
+    width: 350px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .menu-list {
+    gap: 2rem;
+  }
+  .menu-card {
+    width: 300px;
+  }
+  .menu-image img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .explore {
+    padding: 40px 80px;
+  }
+  .menu-list {
+    gap: 4rem;
+  }
+}
+
+/* Penutup Responsive Explore Section & Footer */
+
+
+
+
+
+
+
+/* Footer */
