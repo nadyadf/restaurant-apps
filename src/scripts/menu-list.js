@@ -2,9 +2,8 @@ import data from '../DATA.json';
 
 let makeCard = '';
 
-for(let i=0; i < data.restaurants.length; i++) {
-    makeCard +=
-    `
+for (let i = 0; i < data.restaurants.length; i++) {
+  makeCard += `
         <article class="menu-card">
             <div class="city-name">
                 <p>Kota ${data.restaurants[i].city}</p>
@@ -18,7 +17,7 @@ for(let i=0; i < data.restaurants.length; i++) {
                 <p class="description">${data.restaurants[i].description}</p>
             </div>
         </article>
-    `
+    `;
 }
 
 document.getElementById('menu-list').innerHTML += makeCard;

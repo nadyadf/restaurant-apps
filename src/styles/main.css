@@ -172,36 +172,33 @@ body {
 
 /* Explore Section */
 
-.explore {
+.content {
   padding: 40px 20px;
 }
-.explore h1 {
+.content h1 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 25px;
 }
-.menu-list {
+.restaurants {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
 }
-.menu-card {
+.resto-item {
   width: 300px;
   position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.menu-info {
+.resto-item__info {
   padding: 10px;
 }
-.menu-image {
-  background-color: #3d405b;
-}
-.menu-image img {
+.resto-item__image img {
   width: 300px;
 }
-.city-name {
+.resto-item__city {
   position: absolute;
   background-color: #3d405b;
   color: #f4f1de;
@@ -209,6 +206,13 @@ body {
   width: 30%;
   padding: 6px;
   font-size: 14px;
+}
+
+.resto-item__name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
 /* Penutup Explore Section */
@@ -230,18 +234,18 @@ footer {
 /* Responsive Explore Section & Footer */
 
 @media screen and (max-width: 576px) {
-  .city-name {
+  .resto-item__city {
     padding: 10px;
     font-size: 1em;
     width: 40%;
   }
-  .menu-list {
+  .restaurants {
     gap: 2rem;
   }
-  .menu-card {
+  .resto-item {
     width: 100%;
   }
-  .menu-image img {
+  .resto-item__image img {
     width: 100%;
   }
   footer {
@@ -254,47 +258,47 @@ footer {
   /* .explore {
     padding: 40px 20px;
   } */
-  .menu-list {
+  .restaurants {
     gap: 2rem;
   }
-  .menu-card {
+  .resto-item {
     width: 400px;
   }
-  .menu-image img {
+  .resto-item__image img {
     width: 400px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .menu-list {
+  .restaurants {
     gap: 2rem;
   }
-  .menu-card {
+  .resto-item {
     width: 350px;
   }
-  .menu-image img {
+  .resto-item__image img {
     width: 350px;
   }
 }
 
 
 @media screen and (min-width: 1024px) {
-  .menu-list {
+  .restaurants {
     gap: 2rem;
   }
-  .menu-card {
+  .resto-item {
     width: 300px;
   }
-  .menu-image img {
+  .resto-item__image img {
     width: 300px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .explore {
+  .content {
     padding: 40px 80px;
   }
-  .menu-list {
+  .restaurants {
     gap: 4rem;
   }
 }

@@ -12,6 +12,10 @@
         "sourceType": "module"
     },
     "rules": {
-        
+        "linebreak-style": 0,
+        "no-plusplus": 0,
+        "no-console": 0,
+        "import/no-useless-path-segments": 0,
+        "no-underscore-dangle": 0
     }
 }
