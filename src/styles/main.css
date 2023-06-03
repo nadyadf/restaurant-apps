@@ -58,9 +58,6 @@ body {
   padding: 8px 1.2rem;
 }
 
-.navigation-drawer {
-  /* display: none; */
-}
 .navigation-drawer ul {
   list-style-type: none;
   display: flex;
