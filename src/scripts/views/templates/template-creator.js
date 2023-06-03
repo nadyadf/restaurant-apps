@@ -1,7 +1,15 @@
 import CONFIG from '../../globals/config';
 
-const createRestoItemTemplate = (resto) => `
-  <article class="resto-item">
+const createRestoItemTemplate = (resto) => {
+  const hideSomeDescriptionText = (str, id, wordCount = 40) => `
+    ${str.split(' ')
+    .splice(0, wordCount)
+    .join(' ')} ...
+    <span class="goToDetail">
+      <a href="/#/detail/${id}">More details</a>
+    </span>`;
+
+  return `<article class="resto-item">
     <div class="resto-item__city">
         <p>Kota ${resto.city}</p>
     </div>
@@ -11,15 +19,16 @@ const createRestoItemTemplate = (resto) => `
   <div class="resto-item__info">
       <p class="resto-item__rating">Rating: ${resto.rating}</p>
       <a class="resto-item__name" href="/#/detail/${resto.id}">${resto.name}</a>
-      <p class="resto-item__description">${resto.description}</p>
+      <p class="resto-item__description">${hideSomeDescriptionText(resto.description, resto.id)}</p>
   </div>
   </article>
 `;
+};
 
 const createRestoDetailTemplate = (resto) => {
   let categoriesElement = '';
-  let foodsElement = '<th>Foods</th>';
-  let drinksElement = '<th>Drinks</th>';
+  let foodsElement = '';
+  let drinksElement = '';
   let reviewsElement = '';
 
   resto.categories.forEach((category) => {
@@ -28,16 +37,12 @@ const createRestoDetailTemplate = (resto) => {
 
   resto.menus.foods.forEach((food) => {
     foodsElement += `
-    <tr>
-      <td><i class="fa-solid fa-pizza-slice" style="color: #8aa8db;"></i> ${food.name}</td>
-    </tr>`;
+      <li><i class="fa-solid fa-pizza-slice" style="color: #81b29a;"></i> ${food.name}</li>`;
   });
 
   resto.menus.drinks.forEach((drink) => {
     drinksElement += `
-    <tr>
-      <td><i class="fa-solid fa-mug-hot" style="color: #8aa8db;"></i> ${drink.name}</td>
-    </tr>`;
+      <li><i class="fa-solid fa-mug-hot" style="color: #81b29a;"></i> ${drink.name}</li>`;
   });
 
   resto.customerReviews.forEach((review) => {
@@ -45,7 +50,7 @@ const createRestoDetailTemplate = (resto) => {
       <div class="reviewContainer">
         <h3 class="customerName">${review.name}</h3>
         <p class="review">${review.review}</p>
-        <p class="reviewDate">${review.date}</p> 
+        <p class="reviewDate">${review.date}</p>
       </div>
     `;
   });
@@ -53,8 +58,8 @@ const createRestoDetailTemplate = (resto) => {
   return `
       <h2 class="resto__title">${resto.name}</h2>
       <h3>${resto.city}</h3>
-      <div class="categories">${categoriesElement}</div>
       <div class="resto__data">
+        <div class="categories">${categoriesElement}</div>
         <figure class="resto__image-container">
           <img src="${CONFIG.BASE_IMAGE_URL}/${resto.pictureId}">
           <figcaption>Rating: <span>${resto.rating}</span></figcaption>
@@ -66,12 +71,14 @@ const createRestoDetailTemplate = (resto) => {
           <p>${resto.address}</p>
           <h4>Menu Lists</h4>
           <div class="resto__menu-list">
-            <table>
-              ${foodsElement}
-            </table>
-            <table>
-              ${drinksElement}
-            </table>
+            <div class="menu foods-menu">
+              <h5>Foods</h5>
+              <ul>${foodsElement}</ul>
+            </div>
+            <div class="menu drinks-menu">
+              <h5>Drinks</h5>
+              <ul>${drinksElement}</ul>
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +86,7 @@ const createRestoDetailTemplate = (resto) => {
       <div class="reviews">
         ${reviewsElement}
       </div>
+      <button class="resto__add-favorite-btn"><i class="fa-regular fa-thumbs-up" style="color: #f4f1de;"></i><i class="fa-solid fa-thumbs-up" style="color: #f4f1de;"></i> Add to favorite</button>
 `;
 };
 
