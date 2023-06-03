@@ -86,11 +86,26 @@ const createRestoDetailTemplate = (resto) => {
       <div class="reviews">
         ${reviewsElement}
       </div>
-      <button class="resto__add-favorite-btn"><i class="fa-regular fa-thumbs-up" style="color: #f4f1de;"></i><i class="fa-solid fa-thumbs-up" style="color: #f4f1de;"></i> Add to favorite</button>
 `;
 };
+
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this resto" id="likeButton" class="like">
+    <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
+    <i class="fa-solid fa-thumbs-up" aria-hidden=true></i> Add to Favorite
+  </button>
+  `;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this resto" id="likeButton" class="like">
+  <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+  <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Delete from Favorite
+  </button>
+  `;
 
 export {
   createRestoItemTemplate,
   createRestoDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };
