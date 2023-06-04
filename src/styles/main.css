@@ -239,6 +239,7 @@ body {
   font-weight: bold;
   color: black;
   text-decoration: none;
+  padding: 10px 0;
 }
 
 .resto-item .goToDetail a {
