@@ -11,8 +11,8 @@
     <link rel="manifest" href="./app.webmanifest">
     <title>Restopedia</title>
   </head>
-  <body>
-    <a href="#explore" class="skip-link">Menuju ke konten</a>
+  <body id="body">
+    <a href="#main-content" class="skip-link" id="skip-link">Menuju ke konten</a>
     <header class="app-bar" id="app-bar">
       <a href="/" class="app-bar--brand">Restopedia<i class="fa-solid fa-utensils"></i></a>
       <button class="app-bar--toggler" id="app-bar--toggler" type="button">
@@ -32,7 +32,7 @@
         </ul>
       </nav>
     </header>
-    <main id="main-content"></main>
+    <main id="main-content" tabindex="0"></main>
 
 
 
