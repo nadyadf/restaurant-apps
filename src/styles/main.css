@@ -28,8 +28,6 @@ body {
   top: 100px;
 }
 
-
-
 .app-bar {
   background-color: #e07a5f;
   display: flex;
@@ -176,7 +174,7 @@ body {
 /* Explore Section */
 
 .content {
-  padding: 40px 20px;
+  padding: 40px;
   margin-top: 40px;
   min-height: 100vh;
 }
@@ -202,16 +200,16 @@ body {
 }
 
 .restaurants {
-  display: flex;
+  display: grid;
   width: 100%;
-  flex-wrap: wrap;
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   justify-content: flex-start;
+  align-content: center;
+  grid-auto-rows: minmax(fit-content, 500px);
 }
 
 .resto-item {
-  width: 500px;
-  max-height: 500px;
   position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -221,7 +219,7 @@ body {
 }
 
 .resto-item__image img {
-  width: 300px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
 }
@@ -248,8 +246,6 @@ body {
 }
 
 
-
-/* Penutup Explore Section */
 
 /* Detail */
 
@@ -419,7 +415,7 @@ body {
   display: block;
 }
 
-/* responsive detail */
+/* responsive Detail */
 
 @media screen and (max-width: 1100px) {
   .resto__menu-list {
@@ -489,22 +485,34 @@ footer {
 
 /* Responsive Explore Section & Footer */
 
-@media screen and (max-width: 576px) {
-  .resto-item__city {
-    padding: 10px;
-    font-size: 1em;
-    width: 40%;
-  }
+@media screen and (max-width: 1024px) {
   .restaurants {
-    gap: 2rem;
+    gap: 1rem;
   }
-  .resto-item {
-    width: 100%;
-    max-height: 600px;
+
+}
+
+
+
+
+@media screen and (max-width: 870px) {
+  .content {
+    padding: 40px 20px;
   }
-  .resto-item__image img {
-    width: 100%;
-    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .restaurants {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: 40px 30px;
   }
   footer {
     padding: 20px 40px;
@@ -512,62 +520,3 @@ footer {
   }
 }
 
-
-
-
-@media screen and (min-width: 576px) {
-  .restaurants {
-    gap: 1.5rem;
-  }
-  .resto-item {
-    width: 400px;
-  }
-  .resto-item__image img {
-    width: 400px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .restaurants {
-    gap: 1rem;
-  }
-  .resto-item {
-    width: 300px;
-  }
-  .resto-item__image img {
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 860px) {
-  .restaurants {
-    justify-content: center;
-  }
-  .resto-item {
-    width: 400px;
-  }
-  .resto-item__image img {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 970px) {
-  .resto-item {
-    width: 400px;
-  }
-  .resto-item__image img {
-    width: 400px;
-  }
-}
-
-
-@media screen and (min-width: 1280px) {
-  .content {
-    /* padding: 40px 80px; */
-  }
-  .restaurants {
-    gap: 1.5rem;
-  }
-}
-
-/* Penutup Responsive Explore Section & Footer */
