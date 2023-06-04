@@ -18,7 +18,6 @@ const ExploreResto = {
     const restaurants = await RestoDbResource.restolist();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((resto) => {
-      console.log(resto);
       restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
     });
   },
