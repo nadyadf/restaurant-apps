@@ -61,7 +61,7 @@ const createRestoDetailTemplate = (resto) => {
       <div class="resto__data">
         <div class="categories">${categoriesElement}</div>
         <figure class="resto__image-container">
-          <img src="${CONFIG.BASE_IMAGE_URL}/${resto.pictureId}">
+          <img src="${CONFIG.BASE_IMAGE_URL}/${resto.pictureId}" alt="${resto.name}">
           <figcaption>Rating: <span>${resto.rating}</span></figcaption>
         </figure>
         <div class="resto__info">
