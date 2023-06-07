@@ -5,8 +5,8 @@
   "short_name": "Restopedia",
   "description": "Sumber inspirasi untuk kenikmatan kulinermu",
   "display": "standalone",
-  "background-color": "#fff",
-  "theme_color": "#e07a5f",
+  "background_color": "#FFFFFF",
+  "theme_color": "#E07A5F",
   "icons": [
     {
       "src": "/icons/icon-72x72.png",
@@ -51,8 +51,8 @@
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-500x500.png",
-      "sizes": "500x500",
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
       "type":"image/png",
       "purpose": "any"
     }
